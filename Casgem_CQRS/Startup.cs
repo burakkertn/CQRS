@@ -1,7 +1,7 @@
 using Casgem_CQRS.CQRS.Handlers;
 using Casgem_CQRS.CQRS.Results;
 using Casgem_CQRS.DAL;
-using CQRS_Casgem.CQRSPattern.Handlers;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,11 +28,14 @@ namespace Casgem_CQRS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Context>();
+          
             services.AddScoped<GetProductQueryHandler>();
-            services.AddScoped<GetProductQueryResult>();
-
             services.AddScoped<CreateProductCommandHandler>();
-              services.AddScoped<RemoveProductCommandHandler>();
+            services.AddScoped<RemoveProductCommandHandler>();
+            services.AddScoped<GetProductByIDQueryHandler>();
+            services.AddScoped<GetProductUpdateByIDQueryHandler>();
+            services.AddScoped<UpdateProductCommandHandler>();
+            services.AddScoped<GetProductQueryResult>();
 
 
             services.AddControllersWithViews();

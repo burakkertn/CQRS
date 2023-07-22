@@ -3,7 +3,7 @@ using Casgem_CQRS.DAL;
 
 
 
-namespace CQRS_Casgem.CQRSPattern.Handlers
+namespace Casgem_CQRS.CQRS.Handlers
 {
     public class RemoveProductCommandHandler
     {

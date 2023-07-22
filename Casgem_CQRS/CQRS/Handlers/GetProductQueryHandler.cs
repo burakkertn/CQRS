@@ -5,7 +5,7 @@ using Casgem_CQRS.DAL;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CQRS_Casgem.CQRSPattern.Handlers
+namespace Casgem_CQRS.CQRS.Handlers
 {
     public class GetProductQueryHandler
     {
