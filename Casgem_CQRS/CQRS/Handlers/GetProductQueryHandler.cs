@@ -1,15 +1,15 @@
-﻿using Casgem_CQRS.CQRS.Results;
+﻿
+
+using Casgem_CQRS.CQRS.Results;
 using Casgem_CQRS.DAL;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 
-namespace Casgem_CQRS.CQRS.Handlers
+namespace CQRS_Casgem.CQRSPattern.Handlers
 {
     public class GetProductQueryHandler
     {
         private readonly Context _context;
-
         public GetProductQueryHandler(Context context)
         {
             _context = context;
@@ -20,11 +20,10 @@ namespace Casgem_CQRS.CQRS.Handlers
             {
                 Brand = x.Brand,
                 Category = x.Category,
+                Name = x.Name,
                 Price = x.Price,
-                ProductID = x.ProductID,    
-                Stock = x.Stock,
-
-
+                ProductID = x.ProductID,
+                Stock = x.Stock
             }).ToList();
             return values;
         }
